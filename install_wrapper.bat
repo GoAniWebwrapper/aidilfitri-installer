@@ -1,8 +1,8 @@
-:: Wrapper: Offline (Revision) Installer
+:: Wrapper: Offline ^(Revision^) Installer
 :: Author: octanuary#6596
 :: benson made most of this shit since a lot of this was taken from the launcher
 :: License: MIT
-title Wrapper: Offline (Revision) Installer [Initializing...]
+title Wrapper: Offline ^(Revision^) Installer [Initializing...]
 
 ::::::::::::::::::::
 :: Initialization ::
@@ -24,7 +24,7 @@ pushd "%~dp0"
 :: Dependency Check ::
 ::::::::::::::::::::::
 
-title Wrapper: Offline (Revision) Installer [Checking for Git...]
+title Wrapper: Offline ^(Revision^) Installer [Checking for Git...]
 echo Checking for Git installation...
 
 :: Preload variables
@@ -46,7 +46,7 @@ popd
 ::::::::::::::::::::::::
 
 if !GIT_DETECTED!==n (
-	title Wrapper: Offline (Revision) Installer [Installing Git...]
+	title Wrapper: Offline ^(Revision^) Installer [Installing Git...]
 	echo:
 	echo Installing Git...
 	echo:
@@ -57,7 +57,7 @@ if !GIT_DETECTED!==n (
 		echo:
 		echo ERROR
 		echo:
-		echo Wrapper: Offline (Revision) needs to install Git.
+		echo Wrapper: Offline ^(Revision^) needs to install Git.
 		echo To do this, the installer must be started with Admin rights.
 		echo:
 		echo Close this window and re-open the installer as an Admin.
@@ -73,7 +73,7 @@ if !GIT_DETECTED!==n (
 	:: Install Git
 	if not exist "git_installer.exe" (
 		echo We have a problem. The Git installer doesn't exist.
-		echo A normal copy of the Wrapper: Offline (Revision) installer
+		echo A normal copy of the Wrapper: Offline ^(Revision^) installer
 		echo should come with one.
 		echo You should be able to find a copy on this website:
 		echo https://git-scm.com/downloads
@@ -95,7 +95,7 @@ if !ADMINREQUIRED!==y (
 	color 20
 	cls
 	echo:
-	echo Wrapper: Offline (Revision) no longer needs Admin rights,
+	echo Wrapper: Offline ^(Revision^) no longer needs Admin rights,
 	echo please restart normally by double-clicking.
 	echo:
 	pause
@@ -106,15 +106,15 @@ if !ADMINREQUIRED!==y (
 :: Post-Initialization ::
 :::::::::::::::::::::::::
 
-title Wrapper: Offline (Revision) Installer
+title Wrapper: Offline ^(Revision^) Installer
 :cls
 cls
 
 echo:
-echo Wrapper: Offline (Revision) Installer
+echo Wrapper: Offline ^(Revision^) Installer
 echo Project lead by octanuary
 echo:
-echo Enter 1 to install Wrapper: Offline (Revision)
+echo Enter 1 to install Wrapper: Offline ^(Revision^)
 echo Enter 0 to close the installer
 :wrapperidle
 echo:
@@ -148,7 +148,7 @@ pushd "%~dp0..\"
 echo Cloning repository from GitHub...
 git clone https://github.com/Wrapper-Offline-Revision/wrapper-offline-revision.git
 cls
-echo Wrapper: Offline (Revision) has been installed^^!
+echo Wrapper: Offline ^(Revision^) has been installed^^!
 echo Feel free to move it wherever you want.
 start "" "%~dp0..\wrapper-offline-revision"
 pause & exit
