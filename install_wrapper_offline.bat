@@ -1,7 +1,8 @@
-:: Wrapper: Offline Installer
-:: Author: octanuary#6596 (narutofan420)
+:: Wrapper: Offline (Revision) Installer
+:: Author: octanuary#6596
+:: benson made most of this shit since a lot of this was taken from the launcher
 :: License: MIT
-title Wrapper: Offline Installer [Initializing...]
+title Wrapper: Offline (Revision) Installer [Initializing...]
 
 ::::::::::::::::::::
 :: Initialization ::
@@ -23,7 +24,7 @@ pushd "%~dp0"
 :: Dependency Check ::
 ::::::::::::::::::::::
 
-title Wrapper: Offline Installer [Checking for Git...]
+title Wrapper: Offline (Revision) Installer [Checking for Git...]
 echo Checking for Git installation...
 
 :: Preload variables
@@ -45,7 +46,7 @@ popd
 ::::::::::::::::::::::::
 
 if !GIT_DETECTED!==n (
-	title Wrapper: Offline Installer [Installing Git...]
+	title Wrapper: Offline (Revision) Installer [Installing Git...]
 	echo:
 	echo Installing Git...
 	echo:
@@ -56,7 +57,7 @@ if !GIT_DETECTED!==n (
 		echo:
 		echo ERROR
 		echo:
-		echo Wrapper: Offline needs to install Git.
+		echo Wrapper: Offline (Revision) needs to install Git.
 		echo To do this, the installer must be started with Admin rights.
 		echo:
 		echo Close this window and re-open the installer as an Admin.
@@ -72,14 +73,15 @@ if !GIT_DETECTED!==n (
 	:: Install Git
 	if not exist "git_installer.exe" (
 		echo We have a problem. The Git installer doesn't exist.
-		echo A normal copy of the Wrapper: Offline installer should come with one.
+		echo A normal copy of the Wrapper: Offline (Revision) installer
+		echo should come with one.
 		echo You should be able to find a copy on this website:
 		echo https://git-scm.com/downloads
 		pause & exit
 	)
 	echo Proper Git installation doesn't seem possible to do automatically.
 	echo You can just keep clicking next until it finishes,
-	echo and the W:O installer will continue once it closes.
+	echo and the Revision installer will continue once it closes.
 	git_installer.exe
 	goto git_installed
 	
@@ -93,7 +95,7 @@ if !ADMINREQUIRED!==y (
 	color 20
 	cls
 	echo:
-	echo Wrapper: Offline no longer needs Admin rights,
+	echo Wrapper: Offline (Revision) no longer needs Admin rights,
 	echo please restart normally by double-clicking.
 	echo:
 	pause
@@ -104,15 +106,15 @@ if !ADMINREQUIRED!==y (
 :: Post-Initialization ::
 :::::::::::::::::::::::::
 
-title Wrapper: Offline Installer
+title Wrapper: Offline (Revision) Installer
 :cls
 cls
 
 echo:
-echo Wrapper: Offline Installer
-echo A project from VisualPlugin adapted by Benson and the Wrapper: Offline Team
+echo Wrapper: Offline (Revision) Installer
+echo Project lead by octanuary
 echo:
-echo Enter 1 to install Wrapper: Offline
+echo Enter 1 to install Wrapper: Offline (Revision)
 echo Enter 0 to close the installer
 :wrapperidle
 echo:
@@ -125,6 +127,7 @@ set /p CHOICE=Choice:
 if "!choice!"=="0" goto exit
 if "!choice!"=="1" goto download
 :: funni options
+if "!choice!"=="2" echo
 if "!choice!"=="43" echo OH MY GOD. FOURTY THREE CHARS. NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO & goto wrapperidle
 if "!choice!"=="69" echo nice & goto wrapperidle
 if /i "!choice!"=="benson" echo watch benson on youtube & goto wrapperidle
@@ -134,7 +137,6 @@ if /i "!choice!"=="yes" echo Alright. & goto wrapperidle
 if /i "!choice!"=="fuck you" echo No, fuck you. & goto wrapperidle
 if /i "!choice!"=="sex" echo that's fake & goto wrapperidle
 if /i "!choice!"=="watch benson on youtube" goto w_a_t_c_h
-if /i "!choice!"=="narutofan420" echo i am narutofan420 i am a naruto fan i watch naruto i watched all 3 series and still watch it & goto wrapperidle
 if /i "!choice!"=="die" echo die please & goto wrapperidle
 if /i "!choice!"=="spark" echo WHY DID SOMEONE FUCK UP THE LAUNCHER? & goto wrapperidle
 if /i "!choice!"=="l33t" echo nice l33t video & goto wrapperidle
@@ -144,10 +146,11 @@ echo Time to choose. && goto wrapperidle
 cls
 pushd "%~dp0..\"
 echo Cloning repository from GitHub...
-git clone https://github.com/Wrapper-Offline/Wrapper-Offline-Public.git
+git clone https://github.com/Wrapper-Offline-Revision/wrapper-offline-revision.git
 cls
-echo Wrapper: Offline has been installed^^! Feel free to move it wherever you want.
-start "" "%~dp0..\Wrapper-Offline-Public"
+echo Wrapper: Offline (Revision) has been installed^^!
+echo Feel free to move it wherever you want.
+start "" "%~dp0..\wrapper-offline-revision"
 pause & exit
 
 :w_a_t_c_h
