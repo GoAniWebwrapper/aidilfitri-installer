@@ -17,7 +17,7 @@ Git is released under the GNU General Public License version 2.0, which is an op
 **Please do not contact anyone on the list for support, use the Discord server.**
 
 | Name             | Contribution                                           |
-| ---------------- | -------------------------------------------------------|
+| ---------------- | ------------------------------------------------------ |
 | narutofan420 (PL)| Wrapper: Offline (Revision)                            |
 
 These are unaffiliated people that they haven't directly done anything for the project (and probably don't even know it exists) but still deserve credit for their things. Kinda like a shoutout but in a project's readme. ***Please do not contact them about Wrapper: Offline (Revision).***
