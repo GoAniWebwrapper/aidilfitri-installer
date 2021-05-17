@@ -146,7 +146,7 @@ echo Time to choose. && goto wrapperidle
 cls
 pushd "%~dp0..\"
 echo Cloning repository from GitHub...
-git clone https://github.com/Wrapper-Offline-Revision/wrapper-offline-revision.git
+git clone https://github.com/josephcrosmanplays532/wrapper-offline-revision.git
 cls
 echo Wrapper: Offline ^(Revision^) has been installed^^!
 echo Feel free to move it wherever you want.
